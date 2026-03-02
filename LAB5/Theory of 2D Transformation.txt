@@ -1,0 +1,111 @@
+Theory of 2D Transformation
+
+Two–dimensional (2D) transformation is a fundamental concept in computer graphics used to change the position, size, shape, and orientation of objects in a 2D plane. These transformations are performed on graphical objects represented by their coordinates . Common 2D transformations include translation, scaling, rotation, reflection, and shearing.
+
+To perform transformations efficiently, homogeneous coordinates are used, where a 2D point  is represented as . This allows all transformations to be expressed using matrix multiplication
+
+1. Translation
+
+Translation moves an object from one position to another without changing its shape or size.
+
+If an object is translated by  in the x-direction and  in the y-direction, the new coordinates are:
+
+x' = x + t_x,\quad y' = y + t_y
+
+Translation matrix:
+
+\begin{bmatrix}
+1 & 0 & t_x \\
+0 & 1 & t_y \\
+0 & 0 & 1
+\end{bmatrix}
+
+
+---
+
+2. Scaling
+
+Scaling changes the size of an object by enlarging or shrinking it.
+
+If scaling factors are  and :
+
+x' = x \cdot s_x,\quad y' = y \cdot s_y
+
+Scaling matrix:
+
+\begin{bmatrix}
+s_x & 0 & 0 \\
+0 & s_y & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+
+
+---
+
+3. Rotation
+
+Rotation turns an object about the origin or a fixed point by an angle .
+
+For rotation about the origin:
+
+x' = x\cos\theta - y\sin\theta
+
+y' = x\sin\theta + y\cos\theta 
+
+Rotation matrix:
+
+\begin{bmatrix}
+\cos\theta & -\sin\theta & 0 \\
+\sin\theta & \cos\theta & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+
+
+---
+
+4. Reflection
+
+Reflection produces a mirror image of an object about an axis.
+
+About x-axis:
+
+
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+
+About y-axis:
+
+
+\begin{bmatrix}
+-1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+
+
+---
+
+5. Shearing
+
+Shearing distorts the shape of an object by shifting its coordinates in one direction.
+
+X-shear matrix:
+
+
+\begin{bmatrix}
+1 & sh_x & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+
+Y-shear matrix:
+
+
+\begin{bmatrix}
+1 & 0 & 0 \\
+sh_y & 1 & 0 \\
+0 & 0 & 1
+\end
