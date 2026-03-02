@@ -1,0 +1,27 @@
+The Midpoint Circle Generation Algorithm
+is an efficient rasterization technique
+used in computer graphics to draw a 
+circle on a pixel-based display.
+It determines the positions of pixels 
+that best approximate a circle by 
+using only integer arithmetic, 
+which makes it faster than methods 
+based on trigonometric or floating-point
+calculations.The algorithm works by evaluating 
+the midpoint between two possible pixels at each
+step and deciding which pixel is closer to the actual circle.
+ALGORITHM:
+1. Input center coordinates   and radius  .
+Step 2:
+       Initialize:
+Step 3:
+       Plot the initial eight symmetric points using:
+Step 4:
+         While , repeat:
+Increment 
+If :
+p = p + 2x - 2y + 1 
+Step 5:
+For each calculated point, plot all eight symmetric points.
+Step 6:
+Stop when.
